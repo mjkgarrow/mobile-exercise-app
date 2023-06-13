@@ -1,7 +1,7 @@
 {
   "expo": {
-    "name": "013_workout_mobile",
-    "slug": "013_workout_mobile",
+    "name": "get_fit_now",
+    "slug": "get_fit_now",
     "version": "1.0.0",
     "orientation": "portrait",
     "icon": "./assets/icon.png",
@@ -15,7 +15,8 @@
       "**/*"
     ],
     "ios": {
-      "supportsTablet": true
+      "supportsTablet": false,
+      "bundleIdentifier": "getfitnow"
     },
     "android": {
       "adaptiveIcon": {
@@ -25,6 +26,11 @@
     },
     "web": {
       "favicon": "./assets/favicon.png"
+    },
+    "extra": {
+      "eas": {
+        "projectId": "ae8a4424-4c0e-4578-b1bf-ddf20ac42f28"
+      }
     }
   }
 }
