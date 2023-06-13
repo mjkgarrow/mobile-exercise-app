@@ -1,24 +1,14 @@
-import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, Text, View } from 'react-native';
+import NavTabs from './src/components/NavTabs';
+import { AppProvider } from './src/context/AppContext';
+import { LogBox } from 'react-native';
+LogBox.ignoreLogs(['Warning: ...']); // Ignore log notification by message
+LogBox.ignoreAllLogs();//Ignore all log notifications
+
 
 export default function App() {
   return (
-    <View style={styles.container}>
-      <Text style={styles.splashText}>Big 4 Beth</Text>
-      <StatusBar style="auto" />
-    </View>
-  );
+    <AppProvider>
+      <NavTabs />
+    </AppProvider>
+  )
 }
-
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: '#333',
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
-  splashText: {
-    color: "#fff",
-    fontSize: 50
-  }
-});
